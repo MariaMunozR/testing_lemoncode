@@ -2,8 +2,10 @@ import React from 'react';
 import { createEmptyLookup, Lookup } from 'common/models';
 
 export const useConfirmationDialog = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const [itemToDelete, setItemToDelete] = React.useState(createEmptyLookup());
+  const [isOpen, setIsOpen] = React.useState<boolean>(false);
+  const [itemToDelete, setItemToDelete] = React.useState<Lookup>(
+    createEmptyLookup()
+  );
 
   return {
     isOpen,
